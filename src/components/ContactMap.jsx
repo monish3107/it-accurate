@@ -99,12 +99,13 @@ const ContactMap = () => {
           {/* Right Column - Google Map */}
           <div className="rounded-xl shadow-md overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.566811399634!2d77.2069113150823!3d28.62873998242485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5e2b7f1f3d%3A0x1d9b9a1b6c9e6f1a!2sIT%20ACCURATE!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7442.831790625116!2d79.079853!3d21.135841!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf33b07e2643%3A0x1b45df16c0e6fa96!2sSapalogy%20Training-%20IT%20ACCURATE!5e0!3m2!1sen!2sin!4v1748547475566!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ minHeight: '400px', border: 0 }}
               allowFullScreen=""
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               title="IT Accurate Location"
             ></iframe>
           </div>

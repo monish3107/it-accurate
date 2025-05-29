@@ -22,32 +22,33 @@ const PricingBox = () => {
     { duration: '12 months', interestRate: 16, monthlyPayment: 3447.77 }
   ];
 
+  // Update the paymentLogos array with more reliable image URLs
   const paymentLogos = [
-  {
-    name: 'Visa',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg'
-  },
-  {
-    name: 'Mastercard',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg'
-  },
-  {
-    name: 'American Express',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg'
-  },
-  {
-    name: 'HDFC Bank',
-    logo: 'https://www.hdfcbank.com/content/api/contentstream-id/723fb80a-2dde-42a3-9793-7ae1be57c87f/b06f812a-b194-4ac4-ad7c-22ac2ce16b68/common/logo.svg'
-  },
-  {
-    name: 'SBI',
-    logo: 'https://www.onlinesbi.sbi/documents/37/198452/SBI-Logo.png'
-  },
-  {
-    name: 'Bank of Baroda',
-    logo: 'https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/home/logo.svg'
-  }
-];
+    {
+      name: 'Visa',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg'
+    },
+    {
+      name: 'Mastercard',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg'
+    },
+    {
+      name: 'American Express',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg'
+    },
+    {
+      name: 'HDFC Bank',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/HDFC-Bank-Logo.svg'
+    },
+    {
+      name: 'SBI',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/SBI_new_logo.svg'
+    },
+    {
+      name: 'Bank of Baroda',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Bank_of_Baroda_Ghana_Logo.jpg'
+    }
+  ];
 
   return (
     <section className="py-12 bg-gray-50">
@@ -160,6 +161,10 @@ const PricingBox = () => {
             src={item.logo}
             alt={item.name}
             className="h-full object-contain"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = '/images/placeholder-logo.png'; // Add a placeholder image
+            }}
           />
         </div>
       </div>
